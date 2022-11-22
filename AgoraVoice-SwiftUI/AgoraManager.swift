@@ -17,10 +17,10 @@ class AgoraManager {
 
 extension AgoraManager {
     func initializeAgoraEngine() {
-        agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: "7df51912bf414fae99ee597c8ace5d06", delegate: agoraDelegate)
+        agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: "appid", delegate: agoraDelegate)
     }
     
-    func joinChannel(token: String = "007eJxTYNDS5lh8rMzX33qr2aQbE5PvB4sp3l47XblPTerYOtmHXo0KDOYpaaaGloZGSWkmhiZpiamWlqmpppbmyRaJyammKQZmjVdqkhsCGRlWtxWyMDJAIIjPzlCSWlySmZfOwAAAQ5sgDg==", channelId: String = "testing") {
+    func joinChannel(token: String = "token", channelId: String = "channel") {
         
         agoraKit?.joinChannel(byToken: token, channelId: channelId, info: nil, uid: 0, joinSuccess: {
             (channel, uid, elapsed) in })
